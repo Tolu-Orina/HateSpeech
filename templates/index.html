@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hate Speech Detector</title>
+</head>
+<body>
+    <h1>Hate Speech Detection</h1>
+
+    <form action="{{ url_for('predict')}}" method="POST">
+    	<textarea  name="message" rows="6" cols="50" required="required" style="font-size: 18pt"></textarea>
+		<br> </br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+        	<div class="results">
+
+	{% if prediction == 'hate_speech' %}
+	<h2 style="color:red;">This is Hate Speech</h2>
+	{% elif prediction == 'offensive language' %}
+				<h2 style="color:green;"><b>Offensive Language📰</b></h2>
+    {% elif prediction == 'neither' %}
+				<h2 style="color:green;"><b>Looking Real News📰</b></h2>
+	{% endif %}
+
+	</div>
+
+    </form>
+
+</body>
+</html>
