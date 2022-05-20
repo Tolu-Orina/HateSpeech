@@ -1,0 +1,7 @@
+tensorflow
+keras
+tensorflow-addons
+numpy
+contractions
+nltk
+scikit-learn
