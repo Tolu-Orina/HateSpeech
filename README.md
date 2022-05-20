@@ -15,4 +15,4 @@ Labels in the dataset include:
 * 1 - offensive language
 * 2 - neither
 
-
+A Simple Flask Web Application is made that acts as an interface for the prediction model
